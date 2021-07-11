@@ -1,4 +1,9 @@
-package io.npee.core.member;
+package io.npee.core;
+
+import io.npee.core.member.Grade;
+import io.npee.core.member.Member;
+import io.npee.core.member.MemberService;
+import io.npee.core.member.MemberServiceImpl;
 
 public class MemberApp {
     public static void main(String[] args) {
