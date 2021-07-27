@@ -2,6 +2,7 @@ package io.npee.core;
 
 import io.npee.core.discount.DiscountPolicy;
 import io.npee.core.discount.FixDiscountPolicy;
+import io.npee.core.discount.RateDiscountPolicy;
 import io.npee.core.member.MemberRepository;
 import io.npee.core.member.MemberService;
 import io.npee.core.member.MemberServiceImpl;
@@ -24,6 +25,6 @@ public class AppConfig {
     }
 
     private DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
