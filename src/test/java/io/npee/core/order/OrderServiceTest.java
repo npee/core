@@ -35,4 +35,11 @@ public class OrderServiceTest {
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
 
     }
+
+    @Test
+    void fieldInjectionTest() {
+        OrderServiceImpl orderService = new OrderServiceImpl();
+        orderService.createOrder(1L, "itemA", 10000);
+        // 테스트 불가. 결국 setter 등을 추가해야 함
+    }
 }
