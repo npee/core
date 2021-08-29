@@ -2,7 +2,9 @@ package io.npee.core.discount;
 
 import io.npee.core.member.Grade;
 import io.npee.core.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy {
 
     private int discountFixAmount = 1000;
