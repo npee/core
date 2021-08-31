@@ -1,5 +1,6 @@
 package io.npee.core.order;
 
+import io.npee.core.annotation.MainDiscountPolicy;
 import io.npee.core.discount.DiscountPolicy;
 import io.npee.core.discount.FixDiscountPolicy;
 import io.npee.core.member.Member;
@@ -17,7 +18,7 @@ public class OrderServiceImpl implements OrderService {
     private final DiscountPolicy discountPolicy;
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }

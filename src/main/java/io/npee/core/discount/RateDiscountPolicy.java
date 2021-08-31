@@ -1,5 +1,6 @@
 package io.npee.core.discount;
 
+import io.npee.core.annotation.MainDiscountPolicy;
 import io.npee.core.member.Grade;
 import io.npee.core.member.Member;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -7,7 +8,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+@MainDiscountPolicy
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;
